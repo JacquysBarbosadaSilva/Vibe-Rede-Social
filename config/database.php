@@ -10,7 +10,8 @@ try {
     $pdo = new PDO("mysql:host=$servername;port=$port;dbname=$dbname;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_TIMEOUT, 10); // Timeout de 10 segundos
-    echo "Conexão com RDS estabelecida com sucesso!";
+    echo "<script>console.log('Conexão com RDS estabelecida com sucesso!');</script>";
+
 } catch(PDOException $e) {
     echo "Erro na conexão com RDS: " . $e->getMessage();
 }
